@@ -2,6 +2,10 @@
 *{
 	box-sizing: border-box;
 }
+
+*:focus {
+	outline: none;
+}
 body{
 	margin: 0;
 	background-color: #fff;
@@ -80,9 +84,9 @@ button {
 }
 
 .container {
-	max-width: 1600px;
+	max-width: 1200px;
 	padding: 0 15px;
-	margin: auto;
+	margin: 0 auto; 
 }
 
 .container-fluid {
@@ -139,7 +143,7 @@ button {
 }
 .title.section-title {
 	font-size: 18px;
-	letter-spacing: .5em; /* 0.5em = .5em */
+	letter-spacing: .5em; 
 	margin-bottom: 75px;
 	font-weight: 400;
 }
@@ -161,6 +165,8 @@ blockquote,
 	font-size: 24px;
 	font-weight: 300;
 	line-height: 1.6;
+	padding: 0;
+	margin: 0;
 }
 blockquote span, 
 .blockquote span {
@@ -177,6 +183,7 @@ blockquote span,
 	text-transform: uppercase;
 	font-weight: 400;
 	font-family: 'Open Sans';
+	letter-spacing: .2em;
 }
 
 .btn.btn-default {
@@ -245,6 +252,10 @@ blockquote span,
 /* ---inner end--- */ 
 /* ---About studio--- */
 
+.about-studio .about-us-text {
+	margin-bottom: 80px;
+}
+
 .about-studio .team-item .team-item-info span{
 	display: block;
 }
@@ -261,6 +272,7 @@ blockquote span,
 
 .team-item .team-item-img {
 	position: relative;
+	margin-bottom: 27px;
 }
 
 .team-item .team-item-skills {
@@ -276,8 +288,39 @@ blockquote span,
 .team-item .team-item-img:hover .team-item-skills {
 	opacity: 1;
 }
-
 /* ---About studio end--- */
+
+/* ---Services--- */
+#tabs .tabs-nav li {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#tabs .tabs-nav li span {
+	display: block;
+}
+
+#tabs .icon {
+	margin-bottom: 80px;
+	font-size: 45px;
+}
+#tabs .icon span {
+	text-transform: uppercase;
+	font-family: 'Dosis';
+	font-size: 12px;
+	letter-spacing: .4em;
+	margin-top: 27px;
+}
+
+.ui-state-active {
+
+}
+
+/* ---Services end--- */
+
+
+
+/* ---Services-end--- */
 
 /* ==== Custom styles end ===== */
 
