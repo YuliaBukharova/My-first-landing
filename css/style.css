@@ -36,10 +36,26 @@ ul, ol{
 img {
 	max-width: 100%;
 }
-button {
+input, textarea, button {
 	outline: none;
 	border: none;
+}
+
+button {
 	cursor: pointer;
+	background-color: transparent;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+blockquote {
+	margin: 0;
 }
 
 /* ==Reset end== */
@@ -175,6 +191,49 @@ blockquote span,
 	letter-spacing: .2em;
 }
 
+.form-control {
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	height: 36px;
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #777;
+	padding: 0 13px;
+}
+
+.form-control:focus {
+	border-color: #111;
+}
+
+textarea.form-control {
+	min-height: 82px;
+	padding-top: 10px;
+}
+
+.form-control[disabled],
+.form-control.disabled {
+	cursor: not-allowed;
+	opacity: .6;
+}
+
+.form-control.error {
+	border-color: #f57e7e;
+}
+
+.form-info {
+	font-size: 11px;
+	color: #aaa;
+	font-weight: 400;
+}
+
+.form-info .fa {
+	font-size: 12px;
+}
+
 .btn {
 	display: inline-block;
 	padding: 12px 20px;
@@ -208,7 +267,21 @@ blockquote span,
 	padding: 7px 15px;
 	font-size: 11px;
 }
+
+.btn[disabled] {
+	cursor: not-allowed;
+	color: #777;
+}
+
+
 /* ==Default component end== */
+
+/* ---Guides styles start--- */
+.guid-section form .form-control {
+	margin-bottom: 10px;
+}
+/* ---Guide styles end--- */
+
 /* ==== Custom styles start ===== */
 /* ---inner--- */
 .inner {
@@ -312,15 +385,113 @@ blockquote span,
 	margin-top: 27px;
 }
 
-.ui-state-active {
+/* .ui-state-active {
 
-}
-
+} */
 /* ---Services end--- */
 
+/* ---Portfolio--- */
+.portfolio .portfolio-text {
+	max-width: 760px;
+	margin: auto;
+	vertical-align: middle;
+}
 
+#tabs-portfolio .portfolio-tabs-nav {
+	margin-bottom: 45px;
+	margin-top: 80px;
+}
 
-/* ---Services-end--- */
+#tabs-portfolio .portfolio-tabs-nav li {
+	float: right;
+	width: 100%;
+}
+
+#tabs-portfolio .portfolio-tabs-nav li + li {
+	margin-left: 65px;
+}
+
+#tabs-portfolio span {
+	text-transform: uppercase;
+	font-family: 'Dosis';
+	font-size: 12px;
+	letter-spacing: .4em;
+}
+
+#tabs-portfolio {
+	overflow: hidden;
+}
+
+#tabs-portfolio .portfolio-item {
+	float: left;
+	width: 33.3333%;
+	padding: 4px;
+}
+
+#tabs-portfolio .portfolio-item img {
+	width: 100%;
+	filter: grayscale(100%);
+	transition: all .3s linear;
+}
+
+#tabs-portfolio .portfolio-item:hover img {
+	filter: grayscale(0);
+}
+
+/* ---Portfolio end--- */
+/* ---Lets talk--- */
+.lets-talk-content {
+	padding: 140px 0;
+}
+
+.lets-talk-content p {
+	color: rgba(255, 255, 255, .7);
+	margin-bottom: 35px;
+}
+
+.lets-talk .lets-talk-img {
+	margin-top: -32px;
+}
+/* ---Lets talk end--- */
+
+/* ---Why choose us--- */
+.text-light {
+	font-size: 13px;
+
+}
+.why-choose-us .row + .row {
+	margin-top: 80px;
+}
+
+.advantages .icon {
+	font-size: 50px;
+	margin-bottom: 30px;
+	vertical-align: middle;
+	text-align: center;	
+}
+
+.advantages .title-light {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-family: 'Dosis';
+	font-weight: 400;
+	color: #111;
+	letter-spacing: .3em;
+	margin-bottom: 40px;
+}
+
+/* ---Why choose us--- */
+
+/* ---Subscibe--- */
+.subscribe form .form-control {
+	max-width: 290px;
+}
+
+.subscribe .form-info {
+	margin-top: 17px;
+}
+
+/* ---Subscibe end--- */
 
 /* ==== Custom styles end ===== */
 
