@@ -83,7 +83,6 @@ blockquote {
 .bg-grey {
 	background-color: #f8f8f8;
 }
-
 /* ==Default classes end== */
 
 /* ==Default component start== */
@@ -259,6 +258,11 @@ textarea.form-control {
 	color: #fff;
 }
 
+.btn.btn-grey {
+	color: #777;
+	background-color: #e5e5e5;
+}
+
 .btn.btn-black:hover {
 	background-color: #000;
 }
@@ -272,8 +276,6 @@ textarea.form-control {
 	cursor: not-allowed;
 	color: #777;
 }
-
-
 /* ==Default component end== */
 
 /* ---Guides styles start--- */
@@ -283,6 +285,7 @@ textarea.form-control {
 /* ---Guide styles end--- */
 
 /* ==== Custom styles start ===== */
+
 /* ---inner--- */
 .inner {
 	background: url('../img/inner-bg.jpg') no-repeat center / cover;
@@ -323,8 +326,8 @@ textarea.form-control {
 	font-family: 'Open Sans';
 }
 /* ---inner end--- */ 
-/* ---About studio--- */
 
+/* ---About studio--- */
 .about-studio .about-us-text {
 	margin-bottom: 80px;
 }
@@ -368,7 +371,13 @@ textarea.form-control {
 	float: left;
 	width: 20%;
 	text-align: center;
+	color: #a7a7a7;
 }
+
+#tabs .tabs-nav .ui-state-active {
+	color: #111;
+}
+
 #tabs .tabs-nav li span {
 	display: block;
 }
@@ -384,10 +393,6 @@ textarea.form-control {
 	letter-spacing: .4em;
 	margin-top: 27px;
 }
-
-/* .ui-state-active {
-
-} */
 /* ---Services end--- */
 
 /* ---Portfolio--- */
@@ -404,7 +409,12 @@ textarea.form-control {
 
 #tabs-portfolio .portfolio-tabs-nav li {
 	float: right;
-	width: 100%;
+	width: 760px;
+	color: #a7a7a7;
+}
+
+#tabs-portfolio .portfolio-tabs-nav .ui-state-active {
+	color: #111;
 }
 
 #tabs-portfolio .portfolio-tabs-nav li + li {
@@ -416,10 +426,6 @@ textarea.form-control {
 	font-family: 'Dosis';
 	font-size: 12px;
 	letter-spacing: .4em;
-}
-
-#tabs-portfolio {
-	overflow: hidden;
 }
 
 #tabs-portfolio .portfolio-item {
@@ -466,7 +472,6 @@ textarea.form-control {
 .advantages .icon {
 	font-size: 50px;
 	margin-bottom: 30px;
-	vertical-align: middle;
 	text-align: center;	
 }
 
@@ -479,8 +484,59 @@ textarea.form-control {
 	letter-spacing: .3em;
 	margin-bottom: 40px;
 }
-
 /* ---Why choose us--- */
+/* ---Latest news--- */
+.latest-news .news-link {
+	float: right;
+	font-size: 11px;
+	text-transform: uppercase;
+	line-height: 12px;
+	letter-spacing: .4em;
+	font-family: 'Dosis';
+	color: rgba(157, 157, 157, .62);
+}
+
+.news-block .title-light-grey {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-family: 'Dosis';
+	font-weight: 400;
+	color: #777;
+	letter-spacing: .2em;
+	margin-bottom: 16px;
+}
+
+.author {
+	font-size: 11px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: .4em;
+	color: rgba(153, 153, 153, .6);
+	margin-bottom: 30px;
+}
+
+.news-block {
+	margin-top: 10px;
+}
+
+.news-block p {
+	margin-bottom: 30px;
+}
+
+.news-block .news-img img {
+	margin-bottom: 30px;
+}
+
+.latest-news .news-block .news-img img {
+	filter: grayscale(100%);
+	transition: all .2s linear;
+	width: 100%;
+}
+
+.latest-news .news-block:hover img {
+	filter: grayscale(0);
+}
+/* ---Latest news--- */
 
 /* ---Subscibe--- */
 .subscribe form .form-control {
@@ -490,7 +546,6 @@ textarea.form-control {
 .subscribe .form-info {
 	margin-top: 17px;
 }
-
 /* ---Subscibe end--- */
 
 /* ==== Custom styles end ===== */
