@@ -42,8 +42,10 @@ input, textarea, button {
 }
 
 button {
+	outline: none;
+	border: none;
 	cursor: pointer;
-	background-color: transparent;
+	padding: 0;
 }
 
 textarea {
@@ -82,6 +84,12 @@ blockquote {
 
 .bg-grey {
 	background-color: #f8f8f8;
+}
+
+.m-auto {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* ==Default classes end== */
 
@@ -233,6 +241,17 @@ textarea.form-control {
 	font-size: 12px;
 }
 
+.tabs-nav li {
+	float: left;
+	outline: none;
+	font-size: 13px;
+	font-family: 'Dosis';
+	font-weight: 400;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+	color: rgba(17, 17, 17, .5);
+} 
+
 .btn {
 	display: inline-block;
 	padding: 12px 20px;
@@ -276,9 +295,32 @@ textarea.form-control {
 	cursor: not-allowed;
 	color: #777;
 }
+
+.rhomb-icon {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	border-radius: 2px;
+	font-size: 14px;
+	transform: rotate(45deg);
+}
+.rhomb-icon i {
+	transform: rotate(-45deg);
+}
+.rhomb-icon.black-icon {
+	color: #fff;
+	background-color: #111;
+}
+.rhomb-icon.transparent-icon {
+	color: #111;
+	border: 1px solid rgba(0, 0, 0, .7);
+} 
+
 /* ==Default component end== */
 
-/* ---Guides styles start--- */
+/* ---Guide styles start--- */
 .guid-section form .form-control {
 	margin-bottom: 10px;
 }
@@ -328,11 +370,15 @@ textarea.form-control {
 /* ---inner end--- */ 
 
 /* ---About studio--- */
+.about-studio {
+	border-bottom: 1px solid #ececec; 
+}
+
 .about-studio .about-us-text {
 	margin-bottom: 80px;
 }
 
-.about-studio .team-item .team-item-info span{
+.about-studio .team-item .team-item-info span {
 	display: block;
 }
 
@@ -340,7 +386,8 @@ textarea.form-control {
 	text-transform: uppercase;
 	text-align: center;
 }
-.about-studio .team-item .team-item-info .team-item-role{
+
+.about-studio .team-item .team-item-info .team-item-role {
 	font-size: 12px;
 	margin-top: 12px;
 	text-transform: uppercase;
@@ -364,6 +411,7 @@ textarea.form-control {
 .team-item .team-item-img:hover .team-item-skills {
 	opacity: 1;
 }
+
 /* ---About studio end--- */
 
 /* ---Services--- */
@@ -402,30 +450,34 @@ textarea.form-control {
 	vertical-align: middle;
 }
 
-#tabs-portfolio .portfolio-tabs-nav {
+#tabs-portfolio .portfolio-tabs-nav li {
 	margin-bottom: 45px;
 	margin-top: 80px;
-}
-
-#tabs-portfolio .portfolio-tabs-nav li {
-	float: right;
-	width: 760px;
-	color: #a7a7a7;
 }
 
 #tabs-portfolio .portfolio-tabs-nav .ui-state-active {
 	color: #111;
 }
 
-#tabs-portfolio .portfolio-tabs-nav li + li {
+#tabs-portfolio .portfolio-tabs-nav > li {
+	display: inline-block;
+	float: none;
+}
+
+#tabs-portfolio .portfolio-tabs-nav > li + li {
 	margin-left: 65px;
 }
 
 #tabs-portfolio span {
 	text-transform: uppercase;
 	font-family: 'Dosis';
-	font-size: 12px;
+	font-size: 13px;
 	letter-spacing: .4em;
+	color: #a7a7a7;
+}
+
+#tabs-portfolio {
+	overflow: hidden;
 }
 
 #tabs-portfolio .portfolio-item {
@@ -443,8 +495,8 @@ textarea.form-control {
 #tabs-portfolio .portfolio-item:hover img {
 	filter: grayscale(0);
 }
-
 /* ---Portfolio end--- */
+
 /* ---Lets talk--- */
 .lets-talk-content {
 	padding: 140px 0;
@@ -485,6 +537,119 @@ textarea.form-control {
 	margin-bottom: 40px;
 }
 /* ---Why choose us--- */
+
+/* ---Reviews carousel--- */
+.reviews-carousel {
+	padding: 135px 0;
+	overflow: hidden;
+}
+
+.reviews .reviews-carousel .icon {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.reviews .reviews-carousel .title {
+	margin-bottom: 40px;
+}
+
+.reviews .reviews-carousel p {
+	font-size: 18px;
+	color: rgba(255, 255, 255, .75);
+	max-width: 738px;
+	margin: 0 auto 20px auto;
+	line-height: 1.7;
+}
+
+.reviews .reviews-carousel .review-author {
+	color: rgba(255, 255, 255, .3);
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+
+.slick-dots {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 30px;
+}
+
+.slick-dots li {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-color: rgba(255, 255, 255, .8);
+	border: 1px solid #000;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.slick-dots li button {
+	display: none;
+}
+
+.slick-dots li + li {
+	margin-left: 5px;
+}
+
+.slick-dots li.slick-active {
+	background-color: #000;
+	border-color: rgba(255, 255, 255, .8);
+}
+
+.slick-arrow {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+	width: 90px;
+	cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+	left: 0;
+}
+
+.slick-arrow.slick-next {
+	right: 0;
+}
+
+.slick-arrow .carousel-button {
+	width: 63px;
+	height: 63px;
+	background: #fff;
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 50%;
+	margin-left: -32px;
+	margin-top: -31px;
+}
+
+.slick-arrow.slick-next .carousel-button {
+	right: 0;
+	margin-right: -31px;
+}
+
+.slick-arrow .carousel-button .fa {
+	position: absolute;
+	transform: rotate(45deg);
+	font-size: 10px;
+}
+
+.slick-arrow.slick-prev .carousel-button .fa {
+	bottom: 14px;
+	right: 17px;	
+}
+
+.slick-arrow.slick-next .carousel-button .fa {
+	top: 17px;
+	left: 14px;
+}
+
+/* ---Reviews carousel end--- */
+
 /* ---Latest news--- */
 .latest-news .news-link {
 	float: right;
@@ -523,7 +688,7 @@ textarea.form-control {
 	margin-bottom: 30px;
 }
 
-.news-block .news-img img {
+.latest-news .news-block .news-img {
 	margin-bottom: 30px;
 }
 
@@ -546,8 +711,81 @@ textarea.form-control {
 .subscribe .form-info {
 	margin-top: 17px;
 }
-/* ---Subscibe end--- */
 
+.subscribe .form-info i {
+	margin-right: 3px;
+}
+/* ---Subscibe end--- */
+/* ---Contacts--- */
+.contact-item .contact-item-content {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+} 
+
+.contact-item .contact-item-content span {
+	display: block;
+}
+
+.contact-item .contact-item-content .contact-title {
+	text-transform: uppercase;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	color: #777;
+	letter-spacing: .3em;
+	margin-bottom: 10px;
+}
+
+.contact-item .contact-item-content .contact-data {
+	font-size: 15px;
+	color: #444;
+}
+/* ---Contacts end--- */
+
+/* ---Footer start--- */
+.footer {
+	padding-top: 140px;
+	padding-bottom: 55px;
+	background-color: #f8f8f8;
+}
+
+.footer .footer-social-nav {
+	margin-top: 25px;
+	margin-bottom: 110px;
+}
+
+.footer .footer-social-nav .rhomb-icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer .footer-social-nav .rhomb-icon:hover {
+	color: #fff;
+	background-color: #111;
+}
+
+.footer .footer-social-nav .rhomb-icon + .rhomb-icon {
+	margin-left: 15px;
+}
+
+.footer .footer-copyright .date-of-creation {
+	font-family: "Dosis", sans-serif;
+	font-size: 12px;
+	color: #111;
+	line-height: 24px;
+	letter-spacing: .5em;
+	text-transform: uppercase;
+	font-weight: 400;
+	display: block;
+}
+
+.footer .footer-copyright .footer-moto {
+	font-family: "Open Sans", sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+	color: #999;
+}
+/* ---Footer-end--- */
 /* ==== Custom styles end ===== */
 
 
