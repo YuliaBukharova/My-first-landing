@@ -356,7 +356,7 @@ textarea.form-control {
 	letter-spacing: 1.7em;
 	text-indent: 1.7em;
 	text-transform: uppercase;
-	color: #fff;
+	color: rgba(254, 254, 254, .9);
 	margin-bottom: 90px;
 }
 
@@ -434,10 +434,11 @@ textarea.form-control {
 	margin-bottom: 80px;
 	font-size: 45px;
 }
+
 #tabs .icon span {
 	text-transform: uppercase;
 	font-family: 'Dosis';
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: .4em;
 	margin-top: 27px;
 }
@@ -524,7 +525,9 @@ textarea.form-control {
 .advantages .icon {
 	font-size: 50px;
 	margin-bottom: 30px;
-	text-align: center;	
+	color: #000;
+	position: relative;
+	left: 42%;	
 }
 
 .advantages .title-light {
@@ -552,6 +555,8 @@ textarea.form-control {
 
 .reviews .reviews-carousel .title {
 	margin-bottom: 40px;
+	font-family: 'Dosis';
+	font-weight: 300;
 }
 
 .reviews .reviews-carousel p {
@@ -559,7 +564,7 @@ textarea.form-control {
 	color: rgba(255, 255, 255, .75);
 	max-width: 738px;
 	margin: 0 auto 20px auto;
-	line-height: 1.7;
+	line-height: 1.66;
 }
 
 .reviews .reviews-carousel .review-author {
@@ -716,6 +721,7 @@ textarea.form-control {
 	margin-right: 3px;
 }
 /* ---Subscibe end--- */
+
 /* ---Contacts--- */
 .contact-item .contact-item-content {
 	display: inline-block;
@@ -751,7 +757,7 @@ textarea.form-control {
 
 .footer .footer-social-nav {
 	margin-top: 25px;
-	margin-bottom: 110px;
+	margin-bottom: 105px;
 }
 
 .footer .footer-social-nav .rhomb-icon {
@@ -765,7 +771,7 @@ textarea.form-control {
 }
 
 .footer .footer-social-nav .rhomb-icon + .rhomb-icon {
-	margin-left: 15px;
+	margin-left: 12px;
 }
 
 .footer .footer-copyright .date-of-creation {
