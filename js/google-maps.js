@@ -64,7 +64,7 @@ function initMap() {
         let map = new google.maps.Map(mapElement, mapOptions);
 
         // Image of toogle
-        let image = 'img/contacts-map-marker.png';
+        let image = 'img/map-marker.png';
 
         // Div's of toogle
         let content = document.createElement('div');
