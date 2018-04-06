@@ -61,7 +61,6 @@ input[type="submit"] {
 blockquote {
 	margin: 0;
 }
-
 /* ==Reset end== */
 
 /* ==Default classes start== */
@@ -134,62 +133,6 @@ blockquote {
 	padding: 0 15px;
 }
 
-/* ---Header--- */
-.header { 
-	padding: 25px 0; 
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	z-index: 99;
-	font-size: 12px; 
-	font-family: 'Open Sans';
-	overflow: hidden;
-}
-
-.header .logo {
-	float: left;
-}
-
-.header .header-nav {
-	float: right;
-}
-
-.header .header-nav li {
-	float: left;
-	color: #fff;
-	line-height: 33px;
-	text-transform: uppercase;
-	margin-right: 30px;
-	font-size: 11px; 
-	letter-spacing: .3em;
-	font-weight: 400;
-	color: rgba(255, 255, 255, .75);
-}
-
-.header .header-nav li + li {
-	margin-right: 30px; 
-	color: rgba(255, 255, 255, .75);
-}
-
-.header .header-nav li:last child {
-	margin-right: 0;
-}
-
-.slicknav_menu {
-	display: none;
-}
-
-@media (max-width: 767px) {
-	.slicknav_menu {
-		display: block;
-	}
-	.header-nav {
-		display: none;
-	}
-}
-
-/* ---Header end--- */
-
 .title {
 	font-family: 'Dosis', sans-serif;
 	text-transform: uppercase;
@@ -223,7 +166,7 @@ blockquote {
 	}
 
 	.title.title.section-title-light {
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
 
@@ -251,6 +194,17 @@ blockquote span,
 @media (max-width: 991px) {
 	blockquote {
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	blockquote {
+		font-size: 18px;
+	}
+} 
+@media (max-width: 576px) {
+	.default-text {
+		font-size: 13px;
 	}
 }
 
@@ -387,7 +341,7 @@ textarea.form-control {
 } 
 
 .arrow-up {
-	font-size: 50px;
+	font-size: 40px;
 	color: #c6c6c6;
 	position: fixed;
 	right: 30px;
@@ -401,6 +355,18 @@ textarea.form-control {
 	bottom: 40px;
 }
 
+@media (max-width: 767px) {
+	.arrow-down {
+		bottom: 25px;
+	}
+}
+.rhomb-icon.down-icon {
+	height: 16px;
+	width: 16px;
+	text-align: center;
+	line-height: 16px;
+	font-size: 12px;
+} 
 /* ==Default component end== */
 
 /* ---Guide styles start--- */
@@ -410,6 +376,59 @@ textarea.form-control {
 /* ---Guide styles end--- */
 
 /* ==== Custom styles start ===== */
+/* ---Header--- */
+.header { 
+	padding: 25px 0; 
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 99;
+	font-size: 12px; 
+	font-family: 'Open Sans';
+}
+
+.header .logo {
+	float: left;
+}
+
+.header .header-nav {
+	float: right;
+}
+
+.header .header-nav li {
+	float: left;
+	color: #fff;
+	line-height: 33px;
+	text-transform: uppercase;
+	margin-right: 30px;
+	font-size: 11px; 
+	letter-spacing: .3em;
+	font-weight: 400;
+	color: rgba(255, 255, 255, .75);
+}
+
+.header .header-nav li + li {
+	margin-right: 30px; 
+	color: rgba(255, 255, 255, .75);
+}
+
+.header .header-nav li:last child {
+	margin-right: 0;
+}
+
+.slicknav_menu {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.slicknav_menu {
+		display: block;
+	}
+	.header-nav {
+		display: none;
+	}
+}
+/* ---Header end--- */
 
 /* ---inner--- */
 .inner {
@@ -470,18 +489,20 @@ textarea.form-control {
 		padding: 150px 0;
 	}
 }
-
 @media (max-width: 576px) {
-	.inner-content h1{
+	.inner .inner-content h1 {
 		letter-spacing: .5em;
 		text-indent: .5em;
+		font-size: 15px;
 	}
 }
-
-@media (max-width: 320px){
-	.inner-content h1{
+@media (max-width: 479px){
+	.inner .inner-content h1 {
 		letter-spacing: .2em;
 		text-indent: .2em;
+	}
+	.inner .inner-content span {
+		font-size: 12px;
 	}
 }
 /* ---inner end--- */ 
@@ -616,7 +637,7 @@ textarea.form-control {
 }
 
 @media (max-width: 767px) { 
-	.about-us-text .default-text{
+	.about-us-text .default-text {
 		margin-bottom: 20px;
 	}
 	.about-studio .team-item .team-item-img {
@@ -624,6 +645,11 @@ textarea.form-control {
 	}
 }
 
+@media (max-width: 479px) {
+	.about-studio .about-us-text .default-text  {
+		margin-bottom: 10px;
+	}
+}
 /* ---About studio end--- */
 
 /* ---Services--- */
@@ -646,6 +672,10 @@ textarea.form-control {
 	display: block;
 }
 
+#tabs .tabs-panel {
+	clear: both;
+}
+
 #tabs .icon {
 	margin-bottom: 80px;
 	font-size: 45px;
@@ -664,24 +694,24 @@ textarea.form-control {
 		font-size: 12px;
 	}
 
-	#tabs .tabs-panel {
-		clear: both;
-	}
-
 	#tabs .tabs-nav {
 		margin-bottom: 40px;
 	}
 }
 
 @media (max-width: 767px){
-	#tabs .default-text{
+	#tabs .default-text {
 		margin-bottom: 20px;
 	}
 }
-@media (max-width: 599px){
-	#tabs .tabs-nav > li{
+@media (max-width: 576px){
+	#tabs .tabs-nav > li {
 		width: 50%;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+	}
+	#tabs .tabs-icon span {
+		letter-spacing: .2em;
+		margin-top: 15px;
 	}
 }
 /* ---Services end--- */
@@ -943,7 +973,7 @@ textarea.form-control {
 	left: 14px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
 	.reviews-carousel {
 		padding: 80px 0;
 	}
@@ -957,7 +987,7 @@ textarea.form-control {
 		margin-right: -50px;
 	}
 }
-@media (max-width: 576px){
+@media (max-width: 576px) {
 	.reviews-carousel p {
 		font-size: 11px;
 	}
@@ -1181,17 +1211,11 @@ textarea.form-control {
 	display: none;
 }
 
-.map-container .on-map-block .on-map-block-content::before {
-	content: ' ';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
-
 .on-map-block-content {
+	position: absolute;
 	top: 50%;
 	left: 50%;
-	position: absolute;
+	transform: translate(-50%,-50%);
 	text-align: center;
 }
 
@@ -1214,7 +1238,6 @@ textarea.form-control {
 		margin-bottom: 0;
 	}
 }
-
 /* ---Map end--- */
 
 /* ---Footer start--- */
@@ -1223,45 +1246,51 @@ textarea.form-control {
 	padding-bottom: 55px; 
 }
 
-.footer .footer-social-nav {
-	margin-top: 25px;
-	margin-bottom: 105px;
+.footer-container .footer-social-nav {
+	margin-top: 24px;
+}
+
+.footer-container .footer-social-nav li {
+	display: inline-block;
+}
+
+.footer-container .footer-social-nav li + li {
+	margin-left: 12px;
 }
 
 .footer .footer-social-nav .rhomb-icon {
 	display: inline-block;
 	vertical-align: middle;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
+	width: 23px;
+	height: 23px;
+	line-height: 21px;
 	text-align: center;
-}
-
-.footer .footer-social-nav .rhomb-icon i {
-	font-size: 16px;
 }
 
 .footer .footer-social-nav .rhomb-icon:hover {
 	color: #fff;
-	background-color: #111;
+	background-color: #000;
 }
 
-.footer .footer-social-nav .rhomb-icon + .rhomb-icon {
-	margin-left: 12px;
+.footer-container .footer-copywright {
+	margin-top: 105px;
 }
 
-.footer .footer-copyright .date-of-creation {
-	font-family: 'Dosis', sans-serif;
-	font-size: 12px;
-	color: #111;
-	line-height: 24px;
-	letter-spacing: .5em;
-	text-transform: uppercase;
-	font-weight: 400;
+.footer-container .footer-copywright span {
 	display: block;
 }
 
-.footer .footer-copyright .footer-moto {
+.footer-container .footer-copywright .date-of-creation {
+	font-family: 'Dosis';
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 24px;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+	color: #111;
+}
+
+.footer .footer-copywright .footer-moto {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 11px;
 	line-height: 24px;
@@ -1270,30 +1299,7 @@ textarea.form-control {
 /* ---Footer-end--- */
 /* ==== Custom styles end ===== */
 
-/* ---Media--- */
-/* Desktop, notebook 1300 > */
-/* Netbook, tablet portrait mode 992 - 1200px */
-@media (max-width: 1200px) {
 
-}
-/* Планшеты более 7 дюймов в портретном режиме, 7-дюймовые планшеты 7 в алббомной ориентации 768 - 991px */
-@media (max-width: 991px) {
-
-}
-/* 7 дюймов в портретном режиме, 7-дюймовые планшеты 7 в альбомной ориентации 768 - 991px, */ 
-@media (max-width: 767px) {
-
-}
-
-/* Все моб телефоны в портрет ориент и в альб ориент */
-@media (max-width: 576px) {
-
-}
-
-/* Все моб телефоны в портрет ориент и в альб ориент. Только если нужно для моб тел 320пх*/
-@media (max-width: 479px) {
-
-}
 
 
 
